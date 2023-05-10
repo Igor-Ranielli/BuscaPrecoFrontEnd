@@ -24,11 +24,14 @@
             <th>Data Cotação</th>
         </tr>
         {% for dado in dados %}
-        <td><img style="max-width: 150px; max-height: 150px;" src="{{ dado.link_imagem }}" alt=""></td>
-        <td>{{ dado.nome }}</td>
-        <td>R${{ dado.preco | intcomma }}</td>
-        <td>{{ dado.site }}</td>
-        <td>{{ dado.data_cotacao }}</td>
+        <tr>
+            <td><img style="max-width: 150px; max-height: 150px;" src="{{ dado.link_imagem }}" alt=""></td>
+            <td>{{ dado.nome }}</td>
+            <td>R${{ dado.preco | intcomma }}</td>
+            <td>{{ dado.site }}</td>
+            <td>{{ dado.data_cotacao }}</td>
+        </tr>
+        
         {% endfor %}
     </table>
 </div>
